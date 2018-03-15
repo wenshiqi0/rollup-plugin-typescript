@@ -41,7 +41,7 @@ export default function typescript ( options ) {
 
 	// Load options from `tsconfig.json` unless explicitly asked not to.
 	const tsconfig = options.tsconfig === false ? {} :
-		compilerOptionsFromTsConfig( typescript );
+		compilerOptionsFromTsConfig( typescript, options.baseUrl );
 
 	delete options.tsconfig;
 
